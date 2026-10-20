@@ -3,5 +3,6 @@ export function calculateMean(list) {
     for (const item of list) {
         total += item;
     }
+    return total/list.length;
 }
-// console.log(calculateMean[])
+console.log(calculateMean([3, 50, 7]));
