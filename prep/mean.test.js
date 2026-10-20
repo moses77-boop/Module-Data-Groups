@@ -1,3 +1,5 @@
+import { calculateMean } from "./mean.js";
+
 test("calculate the mean of a list of numbers", () => {
     const list = [3, 50, 7];
     const currentOutput = calculateMean(list);
