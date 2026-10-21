@@ -12,3 +12,11 @@ test("doesn't modify the input", () => {
 
     expect(list).toEqual([1, 2, 3]);
 });
+
+test("calculates the median of a list of even length", () => {
+    const list = [10, 20, 30, 40];
+    const currentOutput = calculateMedian(list);
+    const targetOutput = 25;
+
+    expect(currentOutput).toEqual(targetOutput);
+})
