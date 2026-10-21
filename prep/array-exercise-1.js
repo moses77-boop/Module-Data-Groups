@@ -1,5 +1,5 @@
-function doubleAllNumbers() {
-    let doubledNumbers;
+function doubleAllNumbers(numbers) {
+    let doubledNumbers = [];
 
     for (let n of numbers) {
         doubledNumbers.push(n * 2);
