@@ -34,3 +34,7 @@ test("throws an error when given something that isn't an array", () => {
 test("throws an error when given an array with a non-number", () => {
     expect(() => calculateMedian(["ten", "twenty", "thirty"])).toThrow(new Error("calculateMedian requires an array of numbers"));
 });
+
+test("throws an error when given no argument", () => {
+    expect(() => calculateMedian()).toThrow(new Error("calculateMedian requires an array of numbers"));
+});
