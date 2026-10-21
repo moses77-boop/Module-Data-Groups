@@ -6,13 +6,14 @@
 // or contains values that aren't numbers (the function is expected to throw - see the tests).
 
 function calculateMedian(list) {
+  const sortedList = [...list].sort((a, b) => a - b);
   const middleIndex = Math.floor(list.length / 2);
   if (list.length % 2 === 1) {
-    return list[middleIndex];
+    return sortedList[middleIndex];
   }
 
-  const lowerMiddle = list[middleIndex - 1];
-  const upperMiddle = list[middleIndex];
+  const lowerMiddle = sortedList[middleIndex - 1];
+  const upperMiddle = sortedList[middleIndex];
   return (lowerMiddle + upperMiddle) / 2;
 }
 
