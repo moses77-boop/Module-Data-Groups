@@ -1,4 +1,4 @@
-function calculateMedian(list) {
+export function calculateMedian(list) {
     const middleIndex = Math.floor(list.length / 2);
     
     if (list.length % 2 === 1) {
