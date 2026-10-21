@@ -1,4 +1,8 @@
 export function calculateMedian(list) {
+
+    if (!Array.isArray(list)) {
+        throw new Error("calculateMedian requires an array of numbers");
+    }
     const middleIndex = Math.floor(list.length / 2);
     
     if (list.length % 2 === 1) {
