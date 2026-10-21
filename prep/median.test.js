@@ -1,8 +1,10 @@
+import { calculateMedian } from "./median.js";
+
 test("calculates the median of a list of odd length", () => {
     const list = [10, 20, 30, 40, 50];
     const currentOutput = calculateMedian(list);
     const targetOutput = 30;
-    
+
     expect(currentOutput).toEqual(targetOutput);
 });
 
@@ -19,4 +21,4 @@ test("calculates the median of a list of even length", () => {
     const targetOutput = 25;
 
     expect(currentOutput).toEqual(targetOutput);
-})
+});
