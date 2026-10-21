@@ -30,3 +30,7 @@ test("throws an error when given an empty list", () => {
 test("throws an error when given something that isn't an array", () => {
     expect(() => calculateMedian("banana")).toThrow(new Error("calculateMedian requires an array of numbers"));
 });
+
+test("throws an error when given an array with a non-number", () => {
+    expect(() => calculateMedian(["ten", "twenty", "thirty"])).toThrow(new Error("calculateMedian requires an array of numbers"));
+});
