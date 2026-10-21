@@ -26,3 +26,7 @@ test("calculates the median of a list of even length", () => {
 test("throws an error when given an empty list", () => {
     expect(() =>  calculateMedian([])).toThrow(new Error("calculateMedian requires a non-empty array"));
 });
+
+test("throws an error when given something that isn't an array", () => {
+    expect(() => calculateMedian("banana")).toThrow(new Error("calculateMedian requires an array of numbers"));
+});
