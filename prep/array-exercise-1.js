@@ -8,5 +8,5 @@ function doubleAllNumbers(numbers) {
 }
 
 const myNums = [10, 20, 30];
-doubleAllNumbers(myNums);
-console.log(myNums);
+const doubleNums = doubleAllNumbers(myNums);
+console.log(doubleNums);
