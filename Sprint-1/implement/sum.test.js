@@ -30,6 +30,9 @@ test.todo("given an empty array, returns 0")
 // Given an array containing a value that isn't a number
 // When passed to the sum function
 // Then it should throw Error("sum requires an array of numbers")
+test("given an array with a non-number, throws an error", () => {
+    expect(() => sum(["hey", 10, "hi", 60, 10])).toThrow("sum requires an array of numbers");
+});
 
 // Given something that isn't an array at all, such as "hey", 42 or no argument
 // When passed to the sum function
