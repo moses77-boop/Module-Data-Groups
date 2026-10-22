@@ -42,6 +42,9 @@ test("given an array with one number, returns that number", () => {
 // Given an array containing a value that isn't a number
 // When passed to the max function
 // Then it should throw Error("findMax requires an array of numbers")
+test("given an array with a non-number, throws an error", () => {
+    expect(() => findMax(["hey", 10, "hi", 60, 10])).toThrow("findMax requires an array of numbers");
+});
 
 // Given something that isn't an array at all, such as "hey", 42 or no argument
 // When passed to the max function
