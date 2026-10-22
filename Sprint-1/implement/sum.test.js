@@ -39,3 +39,8 @@ test("given an array with a non-number, throws an error", () => {
 // Given something that isn't an array at all, such as "hey", 42 or no argument
 // When passed to the sum function
 // Then it should throw Error("sum requires an array of numbers")
+test("given something that is not an array, throws an error", () => {
+    expect(() => sum("hey")).toThrow("sum requires an array of numbers");
+    expect(() => sum(42)).toThrow("sum requires an array of numbers");
+    expect(() => sum()).toThrow("sum requires an array of numbers");
+});
