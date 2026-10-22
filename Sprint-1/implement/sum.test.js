@@ -22,11 +22,15 @@ test("given an empty array, returns 0", () => {
 // Then it should return that number
 test("given an array with just one number, returns that number", () => {
     expect(sum([7])).toBe(7);
-})
+});
 
 // Given an array containing negative numbers
 // When passed to the sum function
 // Then it should still return the correct total sum
+test("given an array with negative numbers, returns the correct total", () => {
+    expect(sum([10, -4, -6])).toBe(0);
+    expect(sum([-1, -2, -3])).toBe(-6);
+});
 
 // Given an array with decimal/float numbers
 // When passed to the sum function
