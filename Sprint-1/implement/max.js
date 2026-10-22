@@ -9,7 +9,12 @@ function findMax(elements) {
         if (typeof element !== "number" || Number.isNaN(element)) {
             throw new Error("findMax requires an array of numbers");
         }
+
+        if (element > max) {
+            max = element;
+        }
     }
+    return max;
 }
 
 module.exports = findMax;
