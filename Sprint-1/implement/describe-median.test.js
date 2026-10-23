@@ -29,10 +29,12 @@ test('given [1, 2, 3], returns "The median is 2"', () => {
 // When passed to describeMedian
 // Then it should return "Could not calculate a median: calculateMedian requires a non-empty array"
 test('given an empty array, returns "Could not calculate a median: calculateMedian requires a non-empty array"', () => {
-    expect(describeMedian([])).toBe("Could not calculate median: calculateMedian requires a non-empty array");
+    expect(describeMedian([])).toBe("Could not calculate a median: calculateMedian requires a non-empty array");
 });
 
 // Given something that isn't an array of numbers, e.g. "banana"
 // When passed to describeMedian
 // Then it should return "Could not calculate a median: calculateMedian requires an array of numbers"
-
+test('given something that is not an array, returns "Could not calculate a median: calculateMedian requires an array of numbers"', () => {
+    expect(describeMedian("banana")).toBe("Could not calculate a median: calculateMedian requires an array of numbers");
+});
