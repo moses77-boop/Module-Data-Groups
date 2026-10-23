@@ -29,14 +29,26 @@ test("given [1, 2, 6], returns 3", () => {
 // Given an array with a single number
 // When passed to calculateMean
 // Then it should return that number
+test("given [7], return 7", () => {
+    expect(calculateMean([7])).toBe(7);
+});
 
 // Given an array containing negative or decimal numbers
 // When passed to calculateMean
 // Then it should return the correct mean
+test("given an array of negative numbers, return the correct mean", () => {
+    expect(calculateMean([-1, -3, -5])).toBe(-3);
+});
+
+test("given an array of decimal numbers, return the correct mean", () => {
+    expect(calculateMean([1.5, 2.5])).toBe(2);
+    expect(calculateMean([0.1, 0.2])).toBeCloseTo(0.15);
+});
 
 // Given an empty array
 // When passed to calculateMean
 // Then it should throw Error("calculateMean requires a non-empty array")
+
 
 // Given a value that isn't an array, e.g. "banana", 42, null or {}
 // When passed to calculateMean
