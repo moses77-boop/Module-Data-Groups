@@ -38,3 +38,8 @@ test("given an array with no duplicates, it returns a copy of the original array
 test("given an array of strings with duplicates, it removes them and keeps the first occurrence", () => {
     expect(dedupe(["a", "a", "b", "b", "b", "c"])).toEqual(["a", "b", "c"]);
 });
+
+test("given an array of numbers with duplicates, it removes them and keeps the first occurrence", () => {
+    expect(dedupe([1, 2, 2, 3, 3, 3, 4, 4, 5, 5])).toEqual([1, 2, 3, 4, 5]);
+    expect(dedupe([5, 5, 2, 1, 1,])).toEqual([5, 2, 1]);
+});
