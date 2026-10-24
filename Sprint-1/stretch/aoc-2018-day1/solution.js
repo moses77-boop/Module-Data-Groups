@@ -6,14 +6,14 @@ let frequency = 0;
 const seen = new Set([0]);
 
 while (true) {
-    for (const change of changes) {
-        frequency += change;
-        if (seen.has(frequency)) {
-            console.log(frequency);
-            process.exit(0);
-        }
-        seen.add(frequency);
+  for (const change of changes) {
+    frequency += change;
+    if (seen.has(frequency)) {
+      console.log(frequency);
+      process.exit(0);
     }
+    seen.add(frequency);
+  }
 }
 
 console.log(total);
