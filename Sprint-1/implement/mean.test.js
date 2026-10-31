@@ -61,15 +61,12 @@ test("given a value that is not an array, throws an error", () => {
   expect(() => calculateMean("banana")).toThrow(
     "calculateMean requires an array of numbers"
   );
-
   expect(() => calculateMean(42)).toThrow(
     "calculateMean requires an array of numbers"
   );
-
   expect(() => calculateMean(null)).toThrow(
     "calculateMean requires an array of numbers"
   );
-
   expect(() => calculateMean({})).toThrow(
     "calculateMean requires an array of numbers"
   );
