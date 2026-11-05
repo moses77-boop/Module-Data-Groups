@@ -4,5 +4,7 @@ const profileData = {
   age: 31,
   cityOfResidence: "Manchester",
 };
-profileData.firstName = "Sarah";
+const twinData = profileData;
+twinData.firstName = "Emilia";
+console.log(profileData === twinData);
 console.log(profileData.firstName);
