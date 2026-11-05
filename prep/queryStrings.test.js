@@ -16,4 +16,12 @@ describe("", () => {
 
     expect(currentOutput).toEqual(targetOutput);
   });
+
+  test("handles the case when queryString contains more than 1 pair", () => {
+    const input = "sort=newest&colour=blue";
+    const currentOutput = parseQueryString(input);
+    const targetOutput = { sort: "newest", colour: "blue" };
+
+    expect(currentOutput).toEqual(targetOutput);
+  });
 });
