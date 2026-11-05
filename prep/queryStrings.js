@@ -4,18 +4,18 @@
 
 function parseQueryString(queryString) {
   const object = {};
-
-  const pair = queryString.split("=");
-  const key = pair[0];
-  const value = pair[1];
-
-  object[key] = value;
-
   if (queryString === "") {
-    return {};
-  } else {
     return object;
   }
+
+  const pair = queryString.split("&");
+
+  for (const item of pair) {
+    const [key, value] = item.split("=");
+
+    object[key] = value;
+  }
+  return object;
 }
 
 module.exports = parseQueryString;
