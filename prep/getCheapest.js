@@ -21,5 +21,4 @@ const productivityBook = {
   cost: 16.2,
 };
 
-// this should output 1984
 console.log(getCheapest(fictionBook, productivityBook));
