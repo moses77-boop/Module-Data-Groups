@@ -8,4 +8,12 @@ describe("", () => {
 
     expect(currentOutput).toEqual(targetOutput);
   });
+
+  test("handles the case when queryString contains 1 pair", () => {
+    const input = "sort=newest";
+    const currentOutput = parseQueryString(input);
+    const targetOutput = { sort: "newest" };
+
+    expect(currentOutput).toEqual(targetOutput);
+  });
 });
