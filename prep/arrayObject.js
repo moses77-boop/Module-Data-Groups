@@ -4,4 +4,5 @@ const profileData = {
   age: 31,
   cityOfResidence: "Manchester",
 };
+profileData.firstName = "Sarah";
 console.log(profileData.firstName);
